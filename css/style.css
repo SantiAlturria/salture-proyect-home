@@ -227,7 +227,6 @@ button.enviar {
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 2rem;
-  border-top: 1px solid var(--color-texto);
   font-family: "Montserrat", sans-serif;
 }
 
