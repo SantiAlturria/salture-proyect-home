@@ -628,3 +628,9 @@ button.enviar {
     font-size: 1.2rem;
   }
 }
+
+
+-----------------------------------------------------
+colocar en la terminal para empezar a copilar:
+
+npx sass --watch scss/styles.scss css/style.css

@@ -1,9 +1,16 @@
 @charset "UTF-8";
-/*  VARIABLES */
-:root {
-  --color-texto: #fefefe;
-  --color-fondo: #000000;
-  --color-header: #484848;
+/*--------------------------*/
+.sobre-mi-titulo {
+  text-align: start;
+}
+
+.sobre-mi-parrafo {
+  color: red;
+}
+
+.soy {
+  font-size: 1.5vw;
+  font-weight: 600;
 }
 
 /*  BASE  */
@@ -13,8 +20,8 @@ body {
   font-style: normal;
   height: 100%;
   margin: 0;
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
+  color: #fefefe;
+  background-color: #000000;
 }
 
 .cuerpo {
@@ -30,7 +37,7 @@ main {
 p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: var(--color-texto);
+  color: #fefefe;
   text-align: center;
 }
 
@@ -39,7 +46,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-header);
+  background-color: #484848;
   margin: 1.5rem;
   padding: 2rem;
   border-radius: 0.3125rem;
@@ -54,7 +61,7 @@ p {
 }
 
 .nav-links a {
-  color: var(--color-texto);
+  color: #fefefe;
   text-decoration: none;
   font-size: 1.1vw;
   font-weight: bold;
@@ -112,15 +119,15 @@ p {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: var(--color-texto);
+  color: #fefefe;
   background: none;
   border: none;
 }
 
 /*  HEADER */
 header {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: #000000;
+  color: #fefefe;
   padding: 30px 20px;
   text-align: center;
 }
@@ -183,17 +190,8 @@ h1 {
   font-family: "Ballet", cursive;
   font-weight: 500;
   font-size: 10vw;
-  color: var(--color-texto);
+  color: #fefefe;
   margin-top: -10rem;
-}
-
-.sobre-mi-2 {
-  text-align: start;
-}
-
-.soy {
-  font-size: 1.5vw;
-  font-weight: 600;
 }
 
 /* CARDS */
@@ -208,7 +206,7 @@ h1 {
 }
 
 .card {
-  background-color: var(--color-header);
+  background-color: #484848;
   border-radius: 20px;
   margin-left: 10px;
   flex: 1;
@@ -223,7 +221,7 @@ h1 {
 /* TIPOGRAFÍA  */
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
-  color: var(--color-texto);
+  color: #fefefe;
 }
 
 h2 {
@@ -241,7 +239,7 @@ h3 {
 /*  FORMULARIO */
 .form-container {
   padding: 40px 180px;
-  background-color: var(--color-header);
+  background-color: #484848;
   border-radius: 10px;
   margin: 20px 50px;
   max-width: 800px;
@@ -257,7 +255,7 @@ h3 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: var(--color-texto);
+  color: #fefefe;
   line-height: 1.1;
 }
 
@@ -274,7 +272,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
-  color: var(--color-texto);
+  color: #fefefe;
 }
 
 input,
@@ -282,10 +280,10 @@ textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid var(--color-texto);
+  border: 1px solid #fefefe;
   border-radius: 5px;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: #000000;
+  color: #fefefe;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -347,8 +345,8 @@ textarea {
 button {
   width: 15%;
   padding: 10px;
-  background-color: var(--color-texto);
-  color: var(--color-fondo);
+  background-color: #fefefe;
+  color: #000000;
   font-weight: bold;
   border: none;
   border-radius: 5px;
@@ -357,8 +355,8 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: #484848;
+  color: #fefefe;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -369,8 +367,8 @@ button.enviar {
 
 /* FOOTER */
 .footer {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: #484848;
+  color: #fefefe;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 2rem;
@@ -378,8 +376,8 @@ button.enviar {
 }
 
 .footer {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: #484848;
+  color: #fefefe;
   text-align: center;
   padding: 2rem 1rem;
 }
@@ -393,7 +391,7 @@ button.enviar {
 }
 
 .footer .social-links a {
-  color: var(--color-texto);
+  color: #fefefe;
   text-decoration: none;
   margin: 0 0.5rem;
   font-weight: 600;
@@ -485,7 +483,7 @@ button.enviar {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    background-color: var(--color-header);
+    background-color: #484848;
     position: absolute;
     top: 100%;
     right: 0;
@@ -518,7 +516,7 @@ button.enviar {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: var(--color-fondo);
+    background-color: #000000;
     position: absolute;
     top: 60px;
     right: 20px;

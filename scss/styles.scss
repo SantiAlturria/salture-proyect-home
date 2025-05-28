@@ -1,9 +1,25 @@
-/*  VARIABLES */
-:root {
-  --color-texto: #fefefe;
-  --color-fondo: #000000;
-  --color-header: #484848;
-}
+// Base
+@use "base/normalize" as *;
+@use "base/variables" as *;
+@use "base/mixins" as *;
+@use "base/extend" as *;
+
+// Secciones
+@use "secciones/header";
+@use "secciones/footer";
+
+// Páginas
+@use "pages/index";
+@use "pages/contacto";
+@use "pages/habilidades";
+@use "pages/portfolio";
+@use "pages/sobre-mi";
+
+
+
+
+
+
 
 /*  BASE  */
 body {
@@ -12,8 +28,8 @@ body {
   font-style: normal;
   height: 100%;
   margin: 0;
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
+  color: $color-texto;
+  background-color: $color-fondo;
 }
 
 .cuerpo {
@@ -29,7 +45,7 @@ main {
 p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: var(--color-texto);
+  color: $color-texto;
   text-align: center;
 }
 
@@ -38,7 +54,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-header);
+  background-color: $color-header;
   margin: 1.5rem;
 padding: 2rem;
 border-radius: 0.3125rem;
@@ -53,7 +69,7 @@ border-radius: 0.3125rem;
 }
 
 .nav-links a {
-  color: var(--color-texto);
+  color: $color-texto;
   text-decoration: none;
   font-size: 1.1vw;
   font-weight: bold;
@@ -110,15 +126,15 @@ border-radius: 0.3125rem;
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: var(--color-texto);
+  color: $color-texto;
   background: none;
   border: none;
 }
 
 /*  HEADER */
 header {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: $color-fondo;
+  color: $color-texto;
   padding: 30px 20px;
   text-align: center;
 }
@@ -188,18 +204,18 @@ h1 {
   font-weight: 500;
   font-size: 10vw;
   
-  color: var(--color-texto);
+  color: $color-texto;
   margin-top: -10rem;
 }
 
-.sobre-mi-2 {
-  text-align: start;
-}
+// .sobre-mi-2 {
+//   text-align: start;
+// }
 
-.soy {
-  font-size: 1.5vw;
-  font-weight: 600;
-}
+// .soy {
+//   font-size: 1.5vw;
+//   font-weight: 600;
+// }
 
 /* CARDS */
 .container {
@@ -213,7 +229,7 @@ h1 {
 }
 
 .card {
-  background-color: var(--color-header);
+  background-color: $color-header;
   border-radius: 20px;
   margin-left: 10px;
   flex: 1;
@@ -228,7 +244,7 @@ h1 {
 /* TIPOGRAFÍA  */
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
-  color: var(--color-texto);
+  color: $color-texto;
 }
 
 h2 {
@@ -246,7 +262,7 @@ h3 {
 /*  FORMULARIO */
 .form-container {
   padding: 40px 180px;
-  background-color: var(--color-header);
+  background-color: $color-header;
   border-radius: 10px;
   margin: 20px 50px;
   max-width: 800px;
@@ -262,7 +278,7 @@ h3 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: var(--color-texto);
+  color: $color-texto;
   line-height: 1.1;
 }
 
@@ -279,7 +295,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
-  color: var(--color-texto);
+  color: $color-texto;
 }
 
 input,
@@ -287,10 +303,10 @@ textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid var(--color-texto);
+  border: 1px solid $color-texto;
   border-radius: 5px;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: $color-fondo;
+  color: $color-texto;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -353,8 +369,8 @@ textarea {
 button {
   width: 15%;
   padding: 10px;
-  background-color: var(--color-texto);
-  color: var(--color-fondo);
+  background-color: $color-texto;
+  color: $color-fondo;
   font-weight: bold;
   border: none;
   border-radius: 5px;
@@ -363,8 +379,8 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: $color-header;
+  color: $color-texto;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -375,8 +391,8 @@ button.enviar {
 
 /* FOOTER */
 .footer {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: $color-header;
+  color: $color-texto;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 2rem;
@@ -384,8 +400,8 @@ button.enviar {
 }
 
 .footer {
-  background-color: var(--color-header);
-  color: var(--color-texto);
+  background-color: $color-header;
+  color: $color-texto;
   text-align: center;
   padding: 2rem 1rem;
   
@@ -400,7 +416,7 @@ button.enviar {
 }
 
 .footer .social-links a {
-  color: var(--color-texto);
+  color: $color-texto;
   text-decoration: none;
   margin: 0 0.5rem;
   font-weight: 600;
@@ -511,7 +527,7 @@ button.enviar {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    background-color: var(--color-header);
+    background-color: $color-header;
     position: absolute;
     top: 100%;
     right: 0;
@@ -549,7 +565,7 @@ button.enviar {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: var(--color-fondo);
+    background-color: $color-fondo;
     position: absolute;
     top: 60px;
     right: 20px;
