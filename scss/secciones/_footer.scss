@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 /*--------------------------*/
 .footer {
@@ -8,22 +9,29 @@
   padding: 2rem 1rem;
   margin-top: 2rem;
   font-family: "Montserrat", sans-serif;
-}
 
-.footer {
-  background-color: $color-header;
-  color: $color-texto;
-  text-align: center;
-  padding: 2rem 1rem;
-  
+  @include respond-to($bp-phone) {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .footer p {
   font-size: 1rem;
+
+  @include respond-to($bp-phone) {
+    font-size: 0.9rem;
+  }
 }
 
 .footer .social-links {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include respond-to($bp-phone) {
+    gap: 10px;
+  }
 }
 
 .footer .social-links a {
@@ -32,6 +40,11 @@
   margin: 0 0.5rem;
   font-weight: 600;
   transition: color 0.3s ease;
+
+  @include respond-to($bp-phone-xs) {
+    margin: 0 0.3rem;
+    font-size: 0.9rem;
+  }
 }
 
 .footer .social-links a:hover {
