@@ -1,0 +1,39 @@
+@use "../base/variables" as *;
+
+/*--------------------------*/
+.footer {
+  background-color: $color-header;
+  color: $color-texto;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer {
+  background-color: $color-header;
+  color: $color-texto;
+  text-align: center;
+  padding: 2rem 1rem;
+  
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  color: $color-texto;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #fff;
+}
