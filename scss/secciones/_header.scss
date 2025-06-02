@@ -33,20 +33,19 @@ header {
   padding: 0;
 
   @include respond-to($bp-phone) {
+    display: none;
     flex-direction: column;
     width: 100%;
     gap: 10px;
     margin-top: 1rem;
+    background-color: $color-header;
+    padding: 1rem;
+    border-radius: 10px;
   }
 }
 
 .nav-links a {
-  color: $color-texto;
-  text-decoration: none;
-  font-size: 1.1vw;
-  font-weight: bold;
-
-  font-size: 18px;
+  font-size: 1.5vw;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -56,9 +55,7 @@ header {
   background: none;
   text-transform: uppercase;
   text-decoration: none;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
   display: inline-block;
   padding: 5px 0;
 
@@ -81,9 +78,7 @@ header {
   width: 0%;
   height: 2px;
   background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  transition: width 400ms, left 400ms;
 }
 
 .nav-links a:hover::after,
@@ -97,15 +92,22 @@ header {
   color: inherit;
 }
 
+
 .menu-toggle {
+  display: none;
+}
+
+.hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: $color-texto;
-  background: none;
-  border: none;
 
   @include respond-to($bp-phone) {
     display: block;
   }
+}
+
+.menu-toggle:checked + .hamburger + .LOGO + .nav-links {
+  display: flex;
 }

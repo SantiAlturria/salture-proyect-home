@@ -4,23 +4,20 @@
 /*--------------------------*/
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  height: 100%;
-  margin: 0;
-  color: $color-texto;
-  background-color: $color-fondo;
-}
-
-.cuerpo {
-  min-height: 100vh; 
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: $color-fondo;
+  color: $color-texto;
 }
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 p {
@@ -35,17 +32,17 @@ p {
 }
 
 .inicio {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 .text-focus-in {
-  -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @-webkit-keyframes text-focus-in {
@@ -91,10 +88,7 @@ h1 {
   color: #555;
   margin-top: 1rem;
   z-index: 90;
-  text-shadow:
-    0 0 5px #a5a5a5,
-    0 0 10px #a5a5a5,
-    0 0 20px #a4a4a4;
+  text-shadow: 0 0 5px #a5a5a5, 0 0 10px #a5a5a5, 0 0 20px #a4a4a4;
 }
 
 .bienvenidos {
@@ -106,23 +100,27 @@ h1 {
   margin-top: -10rem;
 
   @include respond-to($bp-desktop) {
-    font-size: 8rem;
+    font-size: 8vw;
+    margin-top: -8rem;
   }
 
   @include respond-to($bp-laptop) {
-    font-size: 6rem;
+    font-size: 6vw;
+    margin-top: -6rem;
   }
 
   @include respond-to($bp-tablet) {
-    font-size: 5rem;
-  }
-
-  @include respond-to($bp-phone) {
-    font-size: 3.5rem;
+    font-size: 5vw;
     margin-top: -5rem;
   }
 
+  @include respond-to($bp-phone) {
+    font-size: 3.5vw;
+    margin-top: -4rem;
+  }
+
   @include respond-to($bp-phone-xs) {
-    font-size: 3rem;
+    font-size: 3vw;
+    margin-top: -3rem;
   }
 }
