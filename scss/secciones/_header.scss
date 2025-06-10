@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-header;
+  background-color: #090b0a;
   margin: 1.5rem;
   padding: 2rem;
   border-radius: 0.3125rem;
@@ -42,7 +42,8 @@ header {
     padding: 1rem;
     border-radius: 10px;
   }
-}
+} 
+
 
 .nav-links a {
   font-size: 1.5vw;
@@ -103,11 +104,13 @@ header {
   cursor: pointer;
   color: $color-texto;
 
-  @include respond-to($bp-phone) {
+  @include respond-to($bp-tablet) {
     display: block;
   }
 }
 
-.menu-toggle:checked + .hamburger + .LOGO + .nav-links {
+
+.menu-toggle:checked ~ .nav-links {
+  max-height: 300px; // Ajustalo según el número de links
   display: flex;
 }

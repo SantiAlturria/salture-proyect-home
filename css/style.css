@@ -1,5 +1,5 @@
 header {
-  background: #000000;
+  background: #090b0a;
   color: #fefefe;
   padding: 30px 20px;
   text-align: center;
@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #484848;
+  background-color: #090b0a;
   margin: 1.5rem;
   padding: 2rem;
   border-radius: 0.3125rem;
@@ -101,13 +101,14 @@ header {
   cursor: pointer;
   color: #fefefe;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 }
 
-.menu-toggle:checked + .hamburger + .LOGO + .nav-links {
+.menu-toggle:checked ~ .nav-links {
+  max-height: 300px;
   display: flex;
 }
 
@@ -166,13 +167,18 @@ header {
 }
 
 /*--------------------------*/
+.logo {
+  width: 200px;
+  border-radius: 5px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #000000;
+  background-color: #090b0a;
   color: #fefefe;
 }
 
@@ -373,7 +379,7 @@ textarea {
   font-size: 1rem;
   border: 1px solid #fefefe;
   border-radius: 5px;
-  background-color: #000000;
+  background-color: #090b0a;
   color: #fefefe;
   font-family: "Montserrat", sans-serif;
 }
@@ -484,7 +490,7 @@ button {
   width: 15%;
   padding: 10px;
   background-color: #fefefe;
-  color: #000000;
+  color: #090b0a;
   font-weight: bold;
   border: none;
   border-radius: 5px;
