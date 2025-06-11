@@ -5,8 +5,28 @@
 header {
   background: $color-fondo;
   color: $color-texto;
-  padding: 30px 20px;
+  padding: 2em 5%;
   text-align: center;
+}
+
+.menu-hamburguesa {
+  display: flex;
+  justify-content: flex-start; // alinea todo a la izquierda
+  align-items: center;
+  gap: 1.5rem; // espacio entre logo e ícono
+  padding: 0 1rem;
+
+ @include respond-to($bp-tablet) {
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+width: 100%;
+ }
+}
+
+.logo {
+  width: 10rem; 
+  height: auto;
 }
 
 .navbar {
@@ -14,11 +34,11 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #090b0a;
-  margin: 1.5rem;
-  padding: 2rem;
+  
   border-radius: 0.3125rem;
+  width: 100%;
 
-  @include respond-to($bp-phone) {
+  @include respond-to($bp-tablet) {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
@@ -32,7 +52,7 @@ header {
   margin: 0;
   padding: 0;
 
-  @include respond-to($bp-phone) {
+  @include respond-to($bp-tablet) {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -42,8 +62,7 @@ header {
     padding: 1rem;
     border-radius: 10px;
   }
-} 
-
+}
 
 .nav-links a {
   font-size: 1.5vw;
@@ -60,7 +79,7 @@ header {
   display: inline-block;
   padding: 5px 0;
 
-  @include respond-to($bp-phone) {
+  @include respond-to($bp-tablet) {
     font-size: 1rem;
   }
 }
@@ -93,7 +112,6 @@ header {
   color: inherit;
 }
 
-
 .menu-toggle {
   display: none;
 }
@@ -103,14 +121,14 @@ header {
   font-size: 2rem;
   cursor: pointer;
   color: $color-texto;
+  margin-left: auto;
 
   @include respond-to($bp-tablet) {
     display: block;
   }
 }
 
-
 .menu-toggle:checked ~ .nav-links {
-  max-height: 300px; // Ajustalo según el número de links
+  max-height: 300px;
   display: flex;
 }

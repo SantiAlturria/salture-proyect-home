@@ -1,8 +1,29 @@
 header {
   background: #090b0a;
   color: #fefefe;
-  padding: 30px 20px;
+  padding: 2em 5%;
   text-align: center;
+}
+
+.menu-hamburguesa {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.logo {
+  width: 10rem;
+  height: auto;
 }
 
 .navbar {
@@ -10,11 +31,10 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #090b0a;
-  margin: 1.5rem;
-  padding: 2rem;
   border-radius: 0.3125rem;
+  width: 100%;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -29,7 +49,7 @@ header {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -57,7 +77,7 @@ header {
   display: inline-block;
   padding: 5px 0;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .nav-links a {
     font-size: 1rem;
   }
@@ -100,6 +120,7 @@ header {
   font-size: 2rem;
   cursor: pointer;
   color: #fefefe;
+  margin-left: auto;
 }
 @media (max-width: 768px) {
   .hamburger {

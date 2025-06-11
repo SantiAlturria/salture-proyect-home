@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" href="assets/imagenes/logo-pages.png" type="image/png">
+    <link rel="icon" href="assets/imagenes/logo-pages.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +16,15 @@
   <body>
     <header>
       <nav class="navbar">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">☰</label>
-        
-        <a href="./index.html">
-        <img src="assets/imagenes/logo.png" alt="Logo Salture" class="logo" />
-        </a>
+        <div class="menu-hamburguesa">
+          <a href="./index.html" class="logo-container">
+            <img
+              src="assets/imagenes/logo.png"
+              alt="Logo Salture"
+              class="logo"/></a>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">☰</label>
+        </div>
         <ul class="nav-links">
           <li><a href="./index.html">INICIO</a></li>
           <li><a href="./pages/sobre-mi.html">SOBRE MÍ</a></li>
@@ -51,5 +54,6 @@
         <a href="mailto:alturriasantiagoezequiel@gmail.com">Email</a>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
