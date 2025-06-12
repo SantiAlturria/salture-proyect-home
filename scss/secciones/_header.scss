@@ -11,21 +11,22 @@ header {
 
 .menu-hamburguesa {
   display: flex;
-  justify-content: flex-start; // alinea todo a la izquierda
+  justify-content: flex-start;
   align-items: center;
-  gap: 1.5rem; // espacio entre logo e ícono
+  gap: 1.5rem;
   padding: 0 1rem;
 
- @include respond-to($bp-tablet) {
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-width: 100%;
- }
+  @include respond-to($bp-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .logo {
-  width: 10rem; 
+  margin-right: auto;
+  width: 10rem;
   height: auto;
 }
 
@@ -34,7 +35,7 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #090b0a;
-  
+
   border-radius: 0.3125rem;
   width: 100%;
 
@@ -125,6 +126,7 @@ width: 100%;
 
   @include respond-to($bp-tablet) {
     display: block;
+    margin-left: 0.5rem;
   }
 }
 
