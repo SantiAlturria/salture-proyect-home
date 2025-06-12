@@ -108,3 +108,34 @@ h3 {
 .descripcion {
   margin-top: -5px;
 }
+
+button {
+  width: 15%;
+  padding: 10px;
+  background-color: $color-texto;
+  color: $color-fondo;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+
+  @include respond-to($bp-tablet) {
+    width: 30%;
+  }
+
+  @include respond-to($bp-phone) {
+    width: 100%;
+  }
+}
+
+button:hover {
+  background-color: $color-header;
+  color: $color-texto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button.enviar {
+  margin: 0 auto;
+}
