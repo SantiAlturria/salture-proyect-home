@@ -16,8 +16,8 @@
 .container-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; // Espacio entre las cards
-  justify-content: center; // O `flex-start` si querés alinearlos a la izquierda
+  gap: 20px; 
+  justify-content: center; 
   padding: 2rem;
 
 }

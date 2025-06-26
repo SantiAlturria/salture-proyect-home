@@ -1,12 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
-/*--------------------------*/
-
-.logo {
-  width: 200px;
-  border-radius: 5px;
-}
 
 body {
   display: flex;
@@ -36,6 +30,108 @@ p {
   }
 }
 
+
+header {
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #090b0a;
+  border-radius: 0.5rem;
+}
+
+.menu-hamburguesa {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 10rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $color-texto;
+
+  @include respond-to($bp-tablet) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    font-size: 1rem;
+    color: #e1e1e1;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.4s, left 0.4s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  @include respond-to($bp-tablet) {
+    flex-direction: column;
+    background-color: $color-header;
+    border-radius: 10px;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+
+.menu-toggle:checked ~ .hamburger + .nav-links {
+  display: flex;
+}
+
+
+
 .inicio {
   flex: 1;
   display: flex;
@@ -43,36 +139,6 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.text-focus-in {
-  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 h1 {
@@ -127,5 +193,22 @@ h1 {
   @include respond-to($bp-phone-xs) {
     font-size: 3vw;
     margin-top: -3rem;
+  }
+}
+
+
+
+.text-focus-in {
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
   }
 }
