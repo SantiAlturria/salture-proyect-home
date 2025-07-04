@@ -829,6 +829,8 @@ button.enviar {
 .soy {
   font-size: 1.5vw;
   font-weight: 600;
+  text-align: right;
+  padding: 5px;
 }
 @media (max-width: 1024px) {
   .soy {
@@ -844,8 +846,9 @@ button.enviar {
 
 .images {
   width: 300px;
-  height: 200px;
+  height: 340px;
   perspective: 1000px;
+  border-radius: 5px;
 }
 
 .img-inner {
@@ -854,6 +857,7 @@ button.enviar {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
+  border-radius: 5px;
 }
 
 .images:hover .img-inner {
@@ -869,11 +873,9 @@ button.enviar {
 }
 
 .img-front {
-  background-color: #6A2C70;
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #6A2C70;
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
@@ -881,14 +883,11 @@ button.enviar {
 }
 
 .img-back {
-  background-color: #F08A5D;
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #F08A5D;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
   transform: rotateY(180deg);
 }
 

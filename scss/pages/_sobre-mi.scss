@@ -27,6 +27,9 @@
 .soy {
   font-size: 1.5vw;
   font-weight: 600;
+  text-align: right;
+  padding: 5px;
+  
 
   @include respond-to($bp-laptop) {
     font-size: 1.2rem;
@@ -41,9 +44,20 @@
 
 .images {
   width: 300px;
-  height: 200px;
+  height: 340px;
   perspective: 1000px;
+  border-radius: 5px;
 }
+
+// .militar-1 {
+//   width: 300px;
+//   height: 280px;
+// }
+
+// .militar-2 {
+//   width: 300px;
+//   height: 280px;
+// }
 
 .img-inner {
   width: 100%;
@@ -51,6 +65,7 @@
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
+   border-radius: 5px;
 }
 
 .images:hover .img-inner {
@@ -66,11 +81,9 @@
 }
 
 .img-front {
-  background-color: #6A2C70;
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #6A2C70;
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
@@ -78,14 +91,10 @@
 }
 
 .img-back {
-  background-color: #F08A5D;
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #F08A5D;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
   transform: rotateY(180deg);
-
 }
