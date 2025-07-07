@@ -1,135 +1,30 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
-
+//---------------------------//
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: $color-fondo;
   color: $color-texto;
 }
 
+//           MAIN
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: $color-texto;
-  text-align: center;
-
-  @include respond-to($bp-phone) {
-    font-size: 1rem;
-  }
-}
-
-
-header {
-  background-color: $color-fondo;
-  color: $color-texto;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  background-color: #090b0a;
-  border-radius: 0.5rem;
-}
-
-.menu-hamburguesa {
-  display: flex;
   align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
   width: 100%;
-  gap: 1rem;
-  position: relative;
-  flex-wrap: wrap;
 }
 
-.logo {
-  width: 10rem;
-  height: auto;
-  border-radius: 5px;
-}
 
-.menu-toggle {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: $color-texto;
-
-  @include respond-to($bp-tablet) {
-    display: block;
-    margin-left: auto;
-  }
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-
-  li a {
-    font-size: 1rem;
-    color: #e1e1e1;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    transition: color 0.3s ease;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background-color: #fff;
-      transition: width 0.4s, left 0.4s;
-    }
-
-    &:hover::after,
-    &:focus::after {
-      width: 100%;
-      left: 0;
-    }
-  }
-
-  @include respond-to($bp-tablet) {
-    flex-direction: column;
-    background-color: $color-header;
-    border-radius: 10px;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    margin-top: 1rem;
-    gap: 1rem;
-  }
-}
-
-.menu-toggle:checked ~ .hamburger + .nav-links {
-  display: flex;
-}
-
+//         SECCIÓN INICIO
 
 
 .inicio {
@@ -160,43 +55,69 @@ h1 {
   margin-top: 1rem;
   z-index: 90;
   text-shadow: 0 0 5px #a5a5a5, 0 0 10px #a5a5a5, 0 0 20px #a4a4a4;
+
+  @include respond-to($bp-phone) {
+    font-size: 2.8rem;
+  }
 }
 
 .bienvenidos {
   font-family: "Ballet", cursive;
   font-weight: 500;
   font-size: 10vw;
-  z-index: 1000;
+  z-index: 99;
   color: $color-texto;
   margin-top: -10rem;
 
   @include respond-to($bp-desktop) {
-    font-size: 8vw;
+    font-size: 10vw;
     margin-top: -8rem;
   }
 
   @include respond-to($bp-laptop) {
-    font-size: 6vw;
-    margin-top: -6rem;
+    font-size: 9.5vw;
+    margin-top: -7rem;
   }
 
   @include respond-to($bp-tablet) {
-    font-size: 5vw;
-    margin-top: -5rem;
+    font-size: 9vw;
+    margin-top: -6rem;
   }
 
   @include respond-to($bp-phone) {
-    font-size: 3.5vw;
-    margin-top: -4rem;
+    font-size: 8.5vw;
+    margin-top: -5rem;
   }
 
   @include respond-to($bp-phone-xs) {
-    font-size: 3vw;
-    margin-top: -3rem;
+    font-size: 5vw;
+    margin-top: -4rem;
   }
 }
 
+.soy {
+  flex: 1;
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-align: right;
+  padding: 5px;
+}
 
+
+//         PÁRRAFOS
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: $color-texto;
+  text-align: center;
+
+  @include respond-to($bp-phone) {
+    font-size: 1rem;
+  }
+}
+
+//        ANIMACIONES
 
 .text-focus-in {
   animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;

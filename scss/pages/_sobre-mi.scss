@@ -1,9 +1,9 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
-//---------------------------//
+
 //      TITULAR PRINCIPAL
-//---------------------------//
+
 
 .tittle {
   margin: 0;
@@ -15,9 +15,9 @@
   text-shadow: 0 0 5px #a5a5a5, 0 0 10px #a5a5a5, 0 0 20px #a4a4a4;
 }
 
-//---------------------------//
+
 //      CONTENEDOR GENERAL
-//---------------------------//
+
 
 .contenido-sobre-mi {
   display: flex;
@@ -56,9 +56,9 @@
   }
 }
 
-//---------------------------//
+
 //       EFECTO FLIP
-//---------------------------//
+
 
 .img-inner {
   width: 100%;

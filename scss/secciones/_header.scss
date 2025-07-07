@@ -1,10 +1,112 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
-
+//---------------------------//
 * {
   box-sizing: border-box;
 }
 
+//          HEADER
+
+header {
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #090b0a;
+  border-radius: 0.5rem;
+}
+
+.menu-hamburguesa {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 10rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $color-texto;
+
+  @include respond-to($bp-tablet) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    font-size: 1rem;
+    color: #e1e1e1;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.4s, left 0.4s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  @include respond-to($bp-tablet) {
+    flex-direction: column;
+    background-color: $color-header;
+    border-radius: 10px;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+
+.menu-toggle:checked ~ .hamburger + .nav-links {
+  display: flex;
+}
+
+//          HEADER
 header {
   background: $color-fondo;
   max-width: 100%;
@@ -12,12 +114,34 @@ header {
   text-align: center;
 }
 
+//           NAVBAR
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #090b0a;
+  border-radius: 0.3125rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+
+  @include respond-to($bp-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+}
+
+//     MENU HAMBURGUESA
 .menu-hamburguesa {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   padding: 0;
+  z-index: 1000;
 
   @include respond-to($bp-tablet) {
     justify-content: space-between;
@@ -29,31 +153,14 @@ header {
   display: flex;
 }
 
+//           LOGO
 .logo {
   margin-right: auto;
   width: 10rem;
   height: auto;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #090b0a;
-  border-radius: 0.3125rem;
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
-  position: relative;
-  z-index: 100;    
-
-  @include respond-to($bp-tablet) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-}
-
+//         NAV LINKS
 .nav-links {
   margin-left: auto;
   display: flex;
@@ -73,53 +180,54 @@ header {
     gap: 10px;
     padding: 1rem;
     border-radius: 10px;
-    margin-top: 0; 
+    margin-top: 0;
   }
-}
 
-.nav-links a {
-  font-size: 1rem;
-  color: #e1e1e1;
-  font-family: inherit;
-  font-weight: 800;
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: inline-block;
-  padding: 5px 0;
-
-  @include respond-to($bp-tablet) {
+  a {
     font-size: 1rem;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-block;
+    padding: 5px 0;
+
+    @include respond-to($bp-tablet) {
+      font-size: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    &::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background-color: #fff;
+      transition: width 400ms, left 400ms;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      left: 0%;
+    }
   }
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #fff;
-}
-
-.nav-links a::after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition: width 400ms, left 400ms;
-}
-
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-  width: 100%;
-  left: 0%;
-}
-
+//        BOTONES EXTRAS
 .btn-primary {
-  text-decoration: none
+  text-decoration: none;
 }
